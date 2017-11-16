@@ -9,10 +9,10 @@ public class Main {
 
         // New system sets first and last names separately
         // Client indirectly uses the Adaptee via Target (Adapter)
-        NewContactTarget target = new NewContactAdapter(oldContact);
+        NewContactTarget targetAdapter = new NewContactAdapter(oldContact);
         Client c1 = new Client();
-        c1.setFirstName(target.getFirstName());
-        c1.setLastName(target.getLastName());
+        c1.setFirstName(targetAdapter.getFirstName());
+        c1.setLastName(targetAdapter.getLastName());
         
         System.out.println(c1);
         
